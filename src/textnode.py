@@ -18,4 +18,4 @@ class TextNode:
         return self.text == target.text and self.text_type == target.text_type and self.url == target.url
     
     def __repr__(self):
-        return f"TextNode({self.text}, {self.text_type.value}, {self.url})"
+        return f"TextNode(text={self.text}, text_type={self.text_type.value}, url={self.url})"
