@@ -19,7 +19,7 @@ class TestParentNode(unittest.TestCase):
 
     def test_to_html_without_children(self):
         parent_node = ParentNode("div", [])
-        self.assertRaises(ValueError, lambda: parent_node.to_html())
+        self.assertEqual(parent_node.to_html(), "<div></div>")
 
     def test_to_html_with_great_grandchildren(self):
         great_grandchild_node = LeafNode("b", "great grandchild")
