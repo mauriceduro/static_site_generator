@@ -5,10 +5,10 @@ class ParentNode(HTMLNode):
     def __init__(self, tag: str, children: list, props: dict=None):
         super().__init__(tag, None, children, props)
 
-    def __repr__(self):
+    def __repr__(self) -> str:
         return f"ParentNode(tag={self.tag}, children={self.children}, props={self.props})"
 
-    def to_html(self):
+    def to_html(self) -> str:
         if self.tag is None:
             raise ValueError("Invalid HTML: No tag set")
         

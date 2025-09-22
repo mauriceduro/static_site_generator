@@ -1,5 +1,5 @@
 from enum import Enum
-
+from htmlnode import HTMLNode
 class TextType(Enum):
     TEXT = "text"
     BOLD_TEXT = "bold_text"
@@ -17,5 +17,9 @@ class TextNode:
     def __eq__(self, target) -> bool:
         return self.text == target.text and self.text_type == target.text_type and self.url == target.url
     
-    def __repr__(self):
+    def __repr__(self) -> str:
         return f"TextNode(text={self.text}, text_type={self.text_type.value}, url={self.url})"
+
+
+def text_node_to_html(text_node: TextNode) -> HTMLNode:
+    pass

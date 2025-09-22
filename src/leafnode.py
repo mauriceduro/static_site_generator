@@ -4,10 +4,10 @@ class LeafNode(HTMLNode):
     def __init__(self, tag: str, value: str, props: dict=None):
         super().__init__(tag, value, None, props)
 
-    def __repr__(self):
+    def __repr__(self) -> str:
         return f"LeafNode(tag={self.tag}, value={self.value}, props={self.props})"
 
-    def to_html(self):
+    def to_html(self) -> str:
         if self.value is None:
             raise ValueError("Invalid HTML: value not set")
         
